@@ -1,22 +1,42 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order to EDI 850 Converter</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Convert Order to EDI 850</h1>
     <form id="orderForm">
-        <label for="orderNumber">Order Number:</label>
-        <input type="text" id="orderNumber" name="orderNumber" required><br><br>
-        
-        <label for="orderDate">Order Date:</label>
-        <input type="date" id="orderDate" name="orderDate" required><br><br>
-        
-        <!-- Additional fields for buyer, supplier, items, etc. -->
-        
+        <div>
+            <label for="orderNumber">Order Number:</label>
+            <input type="text" id="orderNumber" name="orderNumber" required>
+        </div>
+        <div>
+            <label for="orderDate">Order Date:</label>
+            <input type="date" id="orderDate" name="orderDate" required>
+        </div>
+        <div>
+            <label for="buyerName">Buyer Name:</label>
+            <input type="text" id="buyerName" name="buyerName" required>
+        </div>
+        <div>
+            <label for="supplierName">Supplier Name:</label>
+            <input type="text" id="supplierName" name="supplierName" required>
+        </div>
+        <div>
+            <label for="itemNumber">Item Number:</label>
+            <input type="text" id="itemNumber" name="itemNumber" required>
+        </div>
+        <div>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+        </div>
+        <div>
+            <label for="unitPrice">Unit Price:</label>
+            <input type="text" id="unitPrice" name="unitPrice" required>
+        </div>
         <button type="button" onclick="convertToEDI850()">Convert</button>
     </form>
     <pre id="ediOutput"></pre>
